@@ -1,0 +1,856 @@
+<!--
+Author: Ayush Sharma
+Author URL: https://github.com/bharadhwaj-g
+Note : It has been developed on top of W3layout template - http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Ayush Sharma| Home :: Portfolio</title>
+  <link href="css/bootstrap.css" rel='stylesheet' type='text/css' />
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery.min.js"></script>
+  <!-- Custom Theme files -->
+  <link href="css/style.css" rel='stylesheet' type='text/css' />
+  <!-- Custom Theme files -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Ayush Sharma Resume Portfolio Preface Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template" />
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <link rel="icon" type="image/icon" sizes="32x32" href="images/myicon.ico">
+  <link rel="icon" type="image/icon" sizes="16x16" href="images/myicon.ico">
+  <link rel="manifest" href="/manifest.json">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+  <!-- End -->
+  <!-- webfonts -->
+  <link href='//fonts.googleapis.com/css?family=Asap:400,700,400italic' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+  <!-- webfonts -->
+  <!---- start-smoth-scrolling---->
+  <script type="text/javascript" src="js/move-top.js"></script>
+  <script type="text/javascript" src="js/easing.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function ($) {
+      $(".scroll").click(function (event) {
+        event.preventDefault();
+        $('html,body').animate({
+          scrollTop: $(this.hash).offset().top
+        }, 1000);
+      });
+    });
+  </script>
+  <!---- start-smoth-scrolling---->
+</head>
+
+<body>
+  <!-- container -->
+  <!-- header -->
+  <div id="home" class="header">
+    <div class="container">
+      <!-- top-hedader -->
+      <div class="top-header">
+        <!-- /logo -->
+        <!--top-nav---->
+        <div class="top-nav">
+          <div class="navigation">
+            <div class="logo">
+              <h1><a href="index.html"><span>I</span> AM</a></h1>
+            </div>
+            <div class="navigation-right">
+              <span class="menu"><img src="images/menu.png" alt=" " /></span>
+              <nav class="link-effect-3" id="link-effect-3">
+                <ul class="nav1 nav nav-wil">
+                  <li class="active"><a data-hover="Home" href="index.html">Home</a></li>
+                  <li><a class="scroll" data-hover="About" href="#about">About</a></li>
+                  <li><a class="scroll" data-hover="Skills" href="#services">Skills</a></li>
+                  <li><a class="scroll" data-hover="Certificates" href="#certs">Certificates</a></li>
+                  <li><a class="scroll" data-hover="Trailhead" href="#trails">Trailhead</a></li>
+                  <li><a class="scroll" data-hover="Experience" href="#work">Experience</a></li>
+                  <li><a class="scroll" data-hover="Projects" href="#blogs">Projects</a></li>
+                  <li><a class="scroll" data-hover="Contact" href="#contact">Contact</a></li>
+                </ul>
+              </nav>
+              <!-- script-for-menu -->
+              <script>
+                $("span.menu").click(function () {
+                  $("ul.nav1").slideToggle(300, function () {
+                    // Animation complete.
+                  });
+                });
+              </script>
+              <!-- /script-for-menu -->
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- /top-hedader -->
+        </div>
+        <div class="banner-info">
+          <div class="col-md-7 header-right">
+            <h1>Ayush Sharma</h1>
+            <h6>Salesforce Developer & Admin from Jaipur</h6>
+            <div class="hero__links">
+              <a href="docs/AyushResume.pdf" target="_blank" class="hero__resume btn" title="Click to view my Resume">View Resume</a>
+              <ul class="hero__social">
+                <li>
+                  <a href="https://github.com/ayusharma-dev" rel="noopener" target="_blank" title="Github">
+                    <svg version="1.1" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.linkedin.com/in/ayush-sharma-75b55613a/" rel="noopener" title='LinkedIn' target="_blank">
+                    <svg version="1.1" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/_ayu_sh_arma_/" rel="noopener" target="_blank" title="Instagram">
+                    <svg class="instagram-logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 551.034 551.034"  xml:space="preserve">
+                        <path class="logo" id="XMLID_17_" d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
+                        <path id="XMLID_81_" fill="#555" d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"/>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://trailblazer.me/id/ayusharmadev" rel="noopener" target="_blank" title="Trailhead">
+                    <img src="images/trailheadLogo.png" alt="Trailhead Home" width="35%" style='vertical-align: unset;'>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <ul class="address">
+
+              <li>
+                <ul class="address-text">
+                  <li><b>NAME</b></li>
+                  <li>AYUSH SHARMA</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="address-text">
+                  <li><b>D.O.B</b></li>
+                  <li>04-11-1996</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="address-text">
+                  <li><b>MOBILE </b></li>
+                  <li>+91 7023520772</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="address-text">
+                  <li><b>ADDRESS </b></li>
+                  <li>Jaipur, India.</li>
+                </ul>
+              </li>
+              <li>
+                <ul class="address-text">
+                  <li><b>E-MAIL </b></li>
+                  <li><a href="ayusharmadev@gmail.com"> ayusharmadev@gmail.com</a></li>
+                </ul>
+              </li>
+              <li>
+                <ul class="address-text">
+                  <li><b>WEBSITE </b></li>
+                  <li><a href="https://github.com/ayusharma-dev">Ayush Sharma dev</a></li>
+                </ul>
+              </li>
+
+            </ul>
+          </div>
+          <div class="col-md-5 header-left">
+            <img src="images/myDp.jpg" alt="">
+          </div>
+          <div class="clearfix"> </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about -->
+  <div id="about" class="about">
+    <div class="col-md-6 about-left">
+      <div id="owl-demo1" class="owl-carousel owl-carousel2">
+        <div class="item">
+          <div class="about-left-grid">
+            <h2>As a <span>Salesforce Developer & admin</span></h2>
+            <p><strong>Since 2018,</strong> I have been working with <a href="http://shrinathcloud.com" target="_blank">Shrinath Cloud Soft Pvt Limited</a> as a Salesforce developer & admin, where I have been repeatedly recognized for developing innovative solutions for great
+              Salesforce servicing and solving a wide range of problems. <br/> Here, I am responsible for <strong>Analyzing the client requirement </strong> and then suggest the best way to solve it
+                through Salesforce tools and provide the Quality Assurance of the developed Solution.</p>
+              
+                <!--<ul>
+                <li><a class="a-btn-a scroll" href="#blogs">My Work</a></li>
+                <li><a class="a-btn-h scroll" href="#contact">Contact</a></li>
+              </ul>-->
+          </div>
+        </div>
+        <div class="item">
+          <div class="about-left-grid">
+            <h2>My <span>Education</span></h2>
+            <p style='font-size:125%'>I've completed my,
+                Vocational Training from <a href='https://www.larsentoubro.com/' >Larson & Toubro</a>.<br/>
+                B.Tech from <a href="https://www.aryainstitutejpr.com/" target="_blank">Arya Institute of Engineering & Technology</a> , during the period of 2014 - 2018.<b/>
+                Senior secondary Education From Shree Mahaveer Digambar Jain Sr. Sec.</a> School.<b/>
+                <!--<ul>
+                <li><a class="a-btn-a scroll" href="#blogs">My Work</a></li>
+                <li><a class="a-btn-h scroll" href="#contact">Contact</a></li>
+              </ul>-->
+              </p>
+          </div>
+        </div>
+        <div class="item">
+          <div class="about-left-grid">
+            <h2>Free time Activities and <span>Hobbies</span></h2>
+            <ul style='display: grid;list-style-type: none;font-size:150%' >
+              <li>Love to Watch Anime</li><br/>
+              <li>Accessing Social media</li><br/>
+              <li>Learn new technologies</li><br/>
+              <li>Reorganizing everything</li><br/>
+            </ul>
+            <!--<ul>
+                <li><a class="a-btn-a scroll" href="#blogs">My Work</a></li>
+                <li><a class="a-btn-h scroll" href="#contact">Contact</a></li>
+              </ul>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 about-right">
+      
+    </div>
+    <div class="clearfix"> </div>
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <script src="js/owl.carousel.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#owl-demo1").owlCarousel({
+          items: 1,
+          lazyLoad: false,
+          autoPlay: true,
+          navigation: false,
+          navigationText: false,
+          pagination: false,
+        });
+      });
+      
+    </script>
+    <!-- Feedback -->
+    
+  </div>
+  <!-- /about -->
+  <!-- services -->
+  <div id="services" class="services">
+    <div class="container">
+      <div class="service-head one text-center ">
+        <h4>WHAT I DO</h4>
+        <h3>MY <span>SKILLS</span></h3>
+        <span class="border two"></span>
+      </div>
+      <!-- services-grids -->
+      <div class="wthree_about_right_grids w3l-agile">
+        <div class="col-md-6 wthree_about_right_grid">
+          <div class="col-xs-2 wthree_about_right_grid_left">
+            <div class="hvr-rectangle-in">
+              <i class="glyphicon glyphicon-th-large"></i>
+            </div>
+          </div>
+          <div class="col-xs-10 wthree_about_right_grid_right">
+            <h4>Development</h4>
+          </div>
+          <div class="clearfix"> </div>
+          <div class="col-md-12 skill-group-div">
+            <!-- Skill Bars -->
+            <div class="col-md-6 left-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Apex <i class="val">85%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 right-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Visualforce <i class="val">70%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 left-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Aura Component <i class="val">80%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 right-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">LWC <i class="val">65%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 left-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Javascript <i class="val">70%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 right-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Jquery <i class="val">75%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 left-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">SOQL <i class="val">90%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 right-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">APIs <i class="val">80%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 left-div">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Apex Testing <i class="val">85%</i></span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 wthree_about_right_grid">
+          <div class="col-xs-2 wthree_about_right_grid_left">
+            <div class="hvr-rectangle-in">
+              <i class="glyphicon glyphicon-leaf"></i>
+            </div>
+          </div>
+          <div class="col-xs-10 wthree_about_right_grid_right">
+            <h4>Administration</h4>
+          </div>
+          <div class="clearfix"> </div>
+          <div class="col-md-12 skill-group-div">
+            <!-- Skill Bars -->
+            <div class="progress skill-bar ">
+              <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill">Salesforce CPQ <i class="val">90%</i></span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Sales Cloud <i class="val">75%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Approval Process <i class="val">80%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Process builder <i class="val">80%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="progress skill-bar">
+                <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+                  <span class="skill">Security Model <i class="val">85%</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="clearfix"></div>
+            <div class="progress skill-bar ">
+              <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                <span class="skill">Reports & Dashboards <i class="val">75%</i></span>
+              </div>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="clearfix"></div>
+        <span class="border two"></span>
+        <hr></hr>
+        <div class="col-md-6 wthree_about_right_grid">
+          <!--<div class="col-xs-2 wthree_about_right_grid_left">
+            <div class="hvr-rectangle-in">
+              <i class="glyphicon glyphicon-gift"></i>
+            </div>
+          </div>-->
+          <div class="col-xs-10 wthree_about_right_grid_right">
+            <h4>Programming Tools</h4>
+            <ul class="news">
+              <li>Apex</li>
+              <li>Visualforce</li>
+              <li>Aura Component</li>
+              <li>Javascript</li>
+            </ul>
+            <ul class="news">
+              <li>HTML</li>
+              <li>Python</li>
+              <li>JAVA</li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 wthree_about_right_grid">
+          <div class="col-s-20 wthree_about_right_grid_right">
+            <h4>Admin Tools</h4>
+            <ul class="news">
+              <li>Process builder</li>
+              <li>Flows</li>
+              <li>Validation Rules</li>
+              <li>Approval Process</li>
+            </ul>
+            <ul class="news">
+              <li>Formula Fields</li>
+              <li>Permission Sets</li>
+              <li>Deployment</li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 wthree_about_right_grid">
+          <div class="col-xs-10 wthree_about_right_grid_right">
+            <h4>Tools & Ids</h4>
+            <ul class="news">
+              <li>VSCode</li>
+              <li>Salesforce CLI</li>
+              <li>Workbench</li>
+              <li>Eclipse</li>
+            </ul>
+            <ul class="news">
+              <li>DataLoader</li>
+              <li>Postman</li>
+              <li>Android Studio</li>
+              <li>Jitterbit</li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 wthree_about_right_grid">
+          <div class="col-xs-10 wthree_about_right_grid_right">
+            <h4>Others</h4>
+            <ul class="news">
+              <li>Heroku</li>
+              <li>Salesforce Sites</li>
+              <li>Community Builder</li>
+            </ul>
+            <ul class="news" >
+              <li>Salesforce Rest/Soap services</li>
+            </ul>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- services-grids -->
+  </div>
+  </div>
+
+  <br/> <br/>
+
+  <!--Certifications-->
+  <div id="certs" class="blogs">
+    <div class="container">
+      <div class="service-head text-center">
+        <h4>Certifications</h4>
+        <h3 >MY <span>Certifications</span></h3>
+        <span class="border one"></span>
+      </div>
+      <div class="news-grid w3l-agile">
+        <div class="col-md-6 news-text">
+           <div class="col-md-6">
+             <img src="images/PD1Cert.jpg" alt="about" class='cert'/>
+           </div>
+           <div class='certText' >
+              Platform <br/>
+              Developer 
+                 1
+          </div>
+         </div>
+         <div class="col-md-6 news-text">
+           <div class="col-md-6">
+             <img src="images/CPQCert.PNG" alt="about" class='cert'/>
+           </div>
+           <div class='certText' >
+              CPQ <br/>
+              Specialist 
+          </div>
+         </div>
+         <div class="clearfix"></div>
+       </div>
+      <div class="news-grid w3l-agile">
+        <div class="col-md-6 news-text">
+          <div class="col-md-6">
+            <img src="images/LWCUdemy.jpg" alt="about" class='cert'/>
+          </div>
+          <div class='certText' >
+              LWC <br/>
+              Developer 
+          </div>
+        </div>
+        <div class="col-md-6 news-text">
+          <div class="col-md-6">
+            <img src="images/CPQUdemy.jpg" alt="about" class='cert'/>
+          </div>
+          <div class='certText' >
+              CPQ <br/>
+              Developer 
+          </div>
+          
+       </div>
+       <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <br/>
+  <br/>
+
+  <!--Trailhead Section-->
+<div Id = 'trails' ></div>
+  <div id="services" class="services">
+    <div class="container">
+      <div class="service-head one text-center ">
+        <h4>Trailhead</h4>
+        <h3 style='color: rgb(145, 142, 142);'>MY <span>Badges & Points</span></h3>
+        <span class="border one"></span>
+      </div>
+      <br/>
+      <div class="news-grid w3l-agile">
+        <br/>
+        <p><a href="https://trailblazer.me/id/ayusharmadev" rel="noopener" target="_blank" title="Trailhead" style='margin-left: 4%;' >Check out live points here</a></p>
+        <div class="col-md-6 news-text trailheadDetails">
+          <div class="col-md-2">
+            <img src="images/trailheadChart.PNG" alt="about" />
+          </div>
+        </div>
+        <div class="col-md-6 news-text">
+          <div class="col-md-2">
+            <img src="images/trailheadPoints.PNG" alt="about" class='trailImg' />
+            
+          </div>
+        </div>
+       <div class="clearfix"></div>
+      </div>
+      <div class="news-grid w3l-agile trailheadDetails">
+        <div class="col-md-6 news-text"></div>
+        <div class="col-md-6 news-text">
+          <div class="col-md-2" style='margin-left: 21%;'>
+            <img src="images/superbadges.PNG" alt="about" />
+          </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- services -->
+  <!--work-experience-->
+  <div id="work" class="work">
+    <div class="container">
+      <div class="service-head text-center">
+        <h4>WHAT I DID</h4>
+        <h3>MY <span>EXPERIENCE</span></h3>
+        <span class="border one"></span>
+      </div>
+      <div class="time-main w3l-agile">
+        <div class="col-md-6 year-info">
+          <ul class="year">
+            <li>JUN 2018 <i class="glyphicon glyphicon-arrow-right"></i> <span id="tillDate"></span></li>
+            <div class="clearfix"></div>
+          </ul>
+        </div>
+        <ul class="col-md-6 timeline">
+          <li>
+            <div class="timeline-badge info"><i class="glyphicon glyphicon-briefcase"></i></div>
+            <div class="timeline-panel">
+              <div class="timeline-heading">
+                <h4 class="timeline-title"><a href="https://www.shrinathcloud.com/" target="_blank">AppSavio Soft Pvt. Ltd., <i>Jaipur, India</i></a></h4>
+              </div>
+              <div class="timeline-body">
+                <p>We are a growing compony with 6 years of Industry experience. We provide seamless Salesforce development and administration services.
+                   We provide development for Sales cloud - Service cloud implementation, Salesforce Integration, Migration to salesforce, Software testing,
+                   Lightning Development and Salesforce support.
+                </p>
+                <p><strong>Great! place to learn.</strong></p>
+              </div>
+            </div>
+          </li>
+
+        </ul>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+  <!--//work-experience-->
+  <!-- top-grids -->
+  <div class="blog" id="blogs">
+    <div class="container">
+      <div class="service-head text-center">
+        <h4>PROJECTS</h4>
+        <h3>MY <span>Projects</span></h3>
+        <span class="border one"></span>
+      </div>
+      <div class="news-grid w3l-agile">
+        <div class="col-md-6 news-text">
+          <h3> Salesforce CPQ Configuration</h3>
+          <ul class="news">
+            <li>Salesforce CPQ</li>
+            <li>APEX Trigger</li>
+            <li>APEX Batch</li>
+            <li>Schedule Jobs</li>
+          </ul>
+          <ul class="news" >
+            <li>Sales Cloud</li>
+            <li>Docusign</li>
+          </ul>
+          <p><strong>Configured Salesforce CPQ</strong> for a well known Organization from the very scratch. From installing to launching the functionality
+             live, Lead the Project with my team. We developed Apex Triggers and Batches and combined them with native Salesforce CPQ features
+             to achieve the client requirements.
+          </p>
+          <!--<a href="#" data-toggle="modal" data-target="#tlmMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="col-md-6 news-text">
+          <h3>Salesforce Custom Integration with Chargify</h3>
+          <ul class="news">
+            <li>Apex Batch</li>
+            <li>Apex Trigger</li>
+            <li>Rest API</li>
+            <li>Validation rule</li>
+          </ul><ul class="news" >
+            <li>Webservice</li>
+          </ul>
+          <p>Implemented<strong> Custom Integration of Salesforce with Chargify </strong> using Rest APIs inside APEX code. Chargify is a Subscription dedicated CRM which 
+            takes care of the customer subscriptions of different services. We Implemented the code to create a dynamic Sync between Salesforce and Chargify
+            to increase the source efficiency and feasibility.</p>
+          <!--<a href="#" data-toggle="modal" data-target="#ckgsMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="news-grid w3l-agile">
+        <div class="col-md-6 news-text">
+          <h3> Salesforce Integration with Apptopia</h3>
+          <ul class="news">
+            <li>Apex Batch</li>
+            <li>Apex Trigger</li>
+            <li>Rest API</li>
+            <li>Validation rule</li>
+          </ul>
+          <p>Implemented<strong> Custom Integration of Salesforce with Chargify </strong> using Rest APIs inside APEX code to generate the Leads in Salesforce from 
+             Apptopia's Application data. Apptopia provides app publishers & developers access to app intelligence worldwide. Identify store trends, SDKs & opportunities to beat the competition.
+             We used custom rest APIs to provide the Sync between both platforms. We created 10 batches which runs one after another
+            to fetch the data and in the last step analyse the data and create the Possible Leads for client. </p>
+<!--<a href="#" data-toggle="modal" data-target="#bookStackMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="col-md-6 news-text">
+          <h3> Salesforce Integration with Slack</h3>
+          <ul class="news">
+            <li>Apex Trigger</li>
+            <li>Rest API</li>
+            <li>Slack Bot</li>
+            <li>Webhooks</li>
+          </ul>
+          <p>Implemented an Integration of Slack with Salesforce to provide the Opportunity status information inside the Slack chat channels.
+             Implemented Rest API in Apex trigger to send the message to SLACK whenever an special condition occur. Create Slack bot for the
+             Salesforce and used its Authorization techniques to established the requirement.
+          </p>
+          <!--<a href="#" data-toggle="modal" data-target="#pineStemMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="news-grid w3l-agile">
+        <div class="col-md-6 news-text">
+          <h3> <a href="http://jaspex.herokuapp.com/" target="_blank">Json To Apex convertor (JASPEX) </a></h3>
+          <ul class="news">
+            <li>Python</li>
+            <li>Flask</li>
+            <li>Heroku</li>
+            <li>Rest API</li>
+          </ul><ul class="news" >
+            <li>JSON</li>
+            <li>Regex</li>
+          </ul>
+          <p>Crated an Open Source tool to convert the hard coded JSON into Salesforce APEX JSON generator class. You can find the live tool 
+            <a href='http://jaspex.herokuapp.com/'> here</a> and github repository <a href='https://github.com/AyuSharma-dev/jaspex' >here</a>.
+            This is currently hosting on Heroku Platform and written in Python's Flask library with using Regex and other sets of String handling
+            to parse the Json into Apex.
+          </p>
+          <!--<a href="#" data-toggle="modal" data-target="#baseDriveMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="col-md-6 news-text">
+          <h3> <a href="https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex" target="_blank">VS-Code extension for JASPEX </a></h3>
+          <ul class="news">
+            <li>VS Code</li>
+            <li>NodeJS</li>
+            <li>Rest API</li>
+          </ul>
+          <p>This VS code extension does the same work as JASPEX online tool does on browser. It converts the hard-coded JSON into APEX JSON generator class.
+            You can install it from <a href='https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex' >here</a>. This extension is open source
+            and its code is available <a href='https://github.com/AyuSharma-dev/Jaspex_Vscode' >here</a>. 
+            This tools call the JASPEX api through Node JS, which created and deployed on Heroku. It passes the selected JSON and provide APEX with different options.
+          </p>
+          <!--<a href="#" data-toggle="modal" data-target="#counterPickMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      
+
+    </div>
+  </div>
+  
+  <!-- //blog-pop-->
+
+  <!-- /header -->
+  <div class="footer" id="contact">
+    <div class="container">
+      <div class="service-head one text-center">
+        <h4>CONTACT ME</h4>
+        <h3>GET <span>IN TOUCH WITH ME</span></h3>
+        <span class="border two"></span>
+      </div>
+      <div class="mail_us">
+        <div class="col-md-6 mail_left">
+          <div class="contact-grid1-left">
+            <div class="contact-grid1-left1">
+              <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+              <h4>Contact By Email</h4>
+              <ul>
+                <li>Primary: <a href="mailto:ayusharmadev@gmail.com">ayusharmadev@gmail.com</a></li>
+                <li>
+                  <Secondary></Secondary>: <a href="mailto:sharma.ayush84444@gmail.com">sharma.ayush84444@gmail.com</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-grid1-left">
+            <div class="contact-grid1-left1">
+              <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>
+              <h4>Contact By Mobile</h4>
+              <ul>
+                <li>Mobile: +91 7023520772</li>
+                <li>Mobile: +91 8824172077</li>
+              </ul>
+            </div>
+          </div>
+          <div class="contact-grid1-left">
+            <div class="contact-grid1-left1">
+              <span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+              <h4>Looking For Address</h4>
+              <ul>
+                <li>Address: Jaipur, Rajasthan</li>
+                <br/><br/>
+                <br/>
+              </ul>
+            </div>
+          </div>
+          <div class="clearfix"> </div>
+        </div>
+        <div class="col-md-6 mail_right">
+          <form action="#" method="POST">
+
+            
+            
+            Name:<input  id="00N7F00000SiVqb" maxlength="255" name="00N7F00000SiVqb" size="10" type="text" style='height: 10px;' /><br>
+            <label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="10" type="text" style='height: 10px;'/><br>
+            <label for="email">Email</label><input  id="email" maxlength="80" name="email" size="10" type="text" style='height: 10px;'/><br>
+            Message:<textarea  id="00N7F00000SiVqg" name="00N7F00000SiVqg" rows="3" type="text" wrap="soft"></textarea><br>
+            
+            
+            
+            <input type="submit" name="submit">
+            
+            </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      <div class="copy_right text-center">
+        <p class="float-left">&copy; 2020 Profile of Ayush Sharma</p>
+        <p class="float-right">Design on top of <a href="http://w3layouts.com/" target="_blank">W3layouts.</a></p>
+        <ul class="hero__social">
+          <li>
+            <a href="https://github.com/ayusharma-dev" rel="noopener" target="_blank" title="Github">
+              <svg version="1.1" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                <path d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5q0 251-146.5 451.5t-378.5 277.5q-27 5-40-7t-13-30q0-3 .5-76.5t.5-134.5q0-97-52-142 57-6 102.5-18t94-39 81-66.5 53-105 20.5-150.5q0-119-79-206 37-91-8-204-28-9-81 11t-92 44l-38 24q-93-26-192-26t-192 26q-16-11-42.5-27t-83.5-38.5-85-13.5q-45 113-8 204-79 87-79 206 0 85 20.5 150t52.5 105 80.5 67 94 39 102.5 18q-39 36-49 103-21 10-45 15t-57 5-65.5-21.5-55.5-62.5q-19-32-48.5-52t-49.5-24l-20-3q-21 0-29 4.5t-5 11.5 9 14 13 12l7 5q22 10 43.5 38t31.5 51l10 23q13 38 44 61.5t67 30 69.5 7 55.5-3.5l23-4q0 38 .5 88.5t.5 54.5q0 18-13 30t-40 7q-232-77-378.5-277.5t-146.5-451.5q0-209 103-385.5t279.5-279.5 385.5-103zm-477 1103q3-7-7-12-10-3-13 2-3 7 7 12 9 6 13-2zm31 34q7-5-2-16-10-9-16-3-7 5 2 16 10 10 16 3zm30 45q9-7 0-19-8-13-17-6-9 5 0 18t17 7zm42 42q8-8-4-19-12-12-20-3-9 8 4 19 12 12 20 3zm57 25q3-11-13-16-15-4-19 7t13 15q15 6 19-6zm63 5q0-13-17-11-16 0-16 11 0 13 17 11 16 0 16-11zm58-10q-2-11-18-9-16 3-14 15t18 8 14-14z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ayush-sharma-75b55613a/" rel="noopener" title='LinkedIn' target="_blank">
+              <svg version="1.1" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
+                <path d="M477 625v991h-330v-991h330zm21-306q1 73-50.5 122t-135.5 49h-2q-82 0-132-49t-50-122q0-74 51.5-122.5t134.5-48.5 133 48.5 51 122.5zm1166 729v568h-329v-530q0-105-40.5-164.5t-126.5-59.5q-63 0-105.5 34.5t-63.5 85.5q-11 30-11 81v553h-329q2-399 2-647t-1-296l-1-48h329v144h-2q20-32 41-56t56.5-52 87-43.5 114.5-15.5q171 0 275 113.5t104 332.5z"></path>
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/_ayu_sh_arma_/" rel="noopener" target="_blank" title="Instagram">
+              <svg class="instagram-logo" id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 551.034 551.034"  xml:space="preserve">
+                  <path class="logo" id="XMLID_17_" d="M386.878,0H164.156C73.64,0,0,73.64,0,164.156v222.722 c0,90.516,73.64,164.156,164.156,164.156h222.722c90.516,0,164.156-73.64,164.156-164.156V164.156 C551.033,73.64,477.393,0,386.878,0z M495.6,386.878c0,60.045-48.677,108.722-108.722,108.722H164.156 c-60.045,0-108.722-48.677-108.722-108.722V164.156c0-60.046,48.677-108.722,108.722-108.722h222.722 c60.045,0,108.722,48.676,108.722,108.722L495.6,386.878L495.6,386.878z"/>
+                  <path id="XMLID_81_" fill="#555" d="M275.517,133C196.933,133,133,196.933,133,275.516 s63.933,142.517,142.517,142.517S418.034,354.1,418.034,275.516S354.101,133,275.517,133z M275.517,362.6 c-48.095,0-87.083-38.988-87.083-87.083s38.989-87.083,87.083-87.083c48.095,0,87.083,38.988,87.083,87.083 C362.6,323.611,323.611,362.6,275.517,362.6z"/>
+              </svg>
+            </a>
+          </li>
+          <li style='margin-left:-20px' >
+            <a href="https://trailblazer.me/id/ayusharmadev" rel="noopener" target="_blank" title="Trailhead">
+              <img src="images/trailheadLogo.png" alt="Trailhead Home" width="35%" style='vertical-align: unset;'>
+            </a>
+          </li>
+        </ul>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- //footer -->
+  <!-- /container -->
+  <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+  <!--start-smooth-scrolling-->
+  <script type="text/javascript">
+    $(document).ready(function () {
+      /*
+										var defaults = {
+								  			containerID: 'toTop', // fading element id
+											containerHoverID: 'toTopHover', // fading element hover id
+											scrollSpeed: 1200,
+											easingType: 'linear'
+								 		};
+										*/
+      $('.progress .progress-bar').css("width",
+        function () {
+          return $(this).attr("aria-valuenow") + "%";
+        }
+      );
+      $().UItoTop({
+        easingType: 'easeOutQuart'
+      });
+
+    });
+  </script>
+  <!--end-smooth-scrolling-->
+  <!-- //for bootstrap working -->
+  <script src="js/bootstrap.js"></script>
+
+
+</body>
+
+</html>
