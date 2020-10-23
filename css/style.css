@@ -2523,5 +2523,6 @@ svg:not(:root) {
 }
 
 .certText{
-  font-size: 200%;
+  font-size: 150%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
