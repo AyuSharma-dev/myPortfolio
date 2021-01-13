@@ -10,22 +10,27 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <head>
     <title>Ayush Sharma| Home :: Portfolio</title>
+    
     <link href="{{ url_for('static', filename='css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ url_for('static', filename='css/owl.carousel.css') }}" rel="stylesheet" type='text/css'>
+    
+    
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <!-- Custom Theme files -->
-    <link href="{{ url_for('static', filename='css/style.css') }}" rel='stylesheet' type='text/css' />
+    
     <!-- Custom Theme files -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Ayush Sharma Resume Portfolio Preface Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template" />
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
-    <link rel="icon" type="image/icon" sizes="32x32" href="../images/myicon.ico">
-    <link rel="icon" type="image/icon" sizes="16x16" href="../images/myicon.ico">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='images/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/icon" sizes="32x32" href="{{ url_for('static', filename='images/myicon.ico') }}">
+    <link rel="icon" type="image/icon" sizes="16x16" href="{{ url_for('static', filename='images/myicon.ico') }}">
+    <link rel="manifest" href="{{ url_for('static', filename='images/manifest.json') }}">
+    <link rel="mask-icon" href="{{ url_for('static', filename='images/safari-pinned-tab.svg') }}" color="#5bbad5">
     <meta name="theme-color" content="#ffffff">
     <!-- End -->
     <!-- webfonts -->
@@ -95,7 +100,7 @@ Smartphone Compatible web template" />
                         <h1>Ayush Sharma</h1>
                         <h6>Salesforce Developer & Admin from Jaipur</h6>
                         <div class="hero__links">
-                            <a href="../docs/AyushResume.pdf" target="_blank" class="hero__resume btn" title="Click to view my Resume">View Resume</a>
+                            <a href="{{ url_for('static', filename='docs/AyushResume.pdf') }}" target="_blank" class="hero__resume btn" title="Click to view my Resume">View Resume</a>
                             <ul class="hero__social">
                                 <li>
                                     <a href="https://github.com/ayusharma-dev" rel="noopener" target="_blank" title="Github">
@@ -211,7 +216,7 @@ Smartphone Compatible web template" />
 
         </div>
         <div class="clearfix"> </div>
-        <link href="{{ url_for('static', filename='css/owl.carousel.css') }}" rel="stylesheet">
+        
         <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
         <script>
             $(document).ready(function() {
@@ -978,7 +983,7 @@ Smartphone Compatible web template" />
     <!-- /container -->
     <a href="#home " id="toTop " style="display: block; "> <span id="toTopHover " style="opacity: 1; "> </span></a>
     <!--start-smooth-scrolling-->
-    <script type="text/javascript ">
+    <script type="text/javascript">
         $(document).ready(function() {
             /*
 										var defaults = {
@@ -988,9 +993,9 @@ Smartphone Compatible web template" />
 											easingType: 'linear'
 								 		};
 										*/
-            $('.progress .progress-bar').css("width ",
+            $('.progress .progress-bar').css("width",
                 function() {
-                    return $(this).attr("aria-valuenow ") + "% ";
+                    return $(this).attr("aria-valuenow") + "% ";
                 }
             );
             $().UItoTop({
@@ -1001,7 +1006,7 @@ Smartphone Compatible web template" />
     </script>
     <!--end-smooth-scrolling-->
     <!-- //for bootstrap working -->
-    <script src="{{ url_for( 'static', filename='js/bootstrap.js' ) }} "></script>
+    <script src="{{ url_for( 'static', filename='js/bootstrap.js' ) }}" type="text/javascript"></script>
 
 
 </body>
