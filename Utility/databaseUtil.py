@@ -1,4 +1,4 @@
-import sqlite3
+import csv
 
 ##Review class with all required Fields
 class reviewObj:
@@ -20,97 +20,45 @@ class authObj:
         self.password = data[1]
 
 
-##Following method creates the Reviews datatable ( Used once )
-def createTable():
-    sql_create_review_table = """ CREATE TABLE IF NOT EXISTS reviews (
-                                    Email text PRIMARY KEY,
-                                    Name text NOT NULL,
-                                    Title text NOT NULL,
-                                    Company text NOT NULL,
-                                    Review text NOT NULL,
-                                    Image text
-                                    ); """
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql_create_review_table )
-    conn.commit()
-
-
-##Following method creates the Auth datatable ( Used once )
-def createAuthTable():
-    sql_create_auth_table = """ CREATE TABLE IF NOT EXISTS auth (
-                                    Username text PRIMARY KEY,
-                                    Password_hash text NOT NULL
-                                    ); """
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql_create_auth_table )
-    conn.commit()
-
-
-##Following method inserts the username and password values( Used once )
-def insertUserNamePassword():
-    sql = ''' INSERT INTO auth(Username,Password_hash)
-              VALUES(?,?) '''
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql, ( 'portfolioUser@sf.com', "b'gAAAAABgAr08c0VWa5WMAnI3smwOOelf1qmr8S-cMPatfNf22lHvHyZVPGYA3AKnr9HWmPhp4C8D2UNxIf67Nuw0f9OVqENxvw=='" ) )
-    conn.commit()
-
-
 ##Following method updates the Password for username ( Not in use )
-def updateData( newPassword, username ):
-    sql = ''' UPDATE auth
-              SET Password_hash = ?
-              WHERE Username = ?'''
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql, (newPassword, username) )
-    conn.commit()
+#def updateData( newPassword, username ):
+    
 
 
 ##Following method inserts the Reviews in database
 def insertData( review ):
-    sql = ''' INSERT INTO reviews(Name,Email,Title,Company,Review,Image)
-              VALUES(?,?,?,?,?,?) '''
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql, review )
-    conn.commit()
+    with open('static/docs/reviews.csv', 'a', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow( review )
 
 
 ##Following method queries the Auth values from Database
 def getUserPass():
-    conn = sqlite3.connect( 'database\database.db' )
-    sql = 'SELECT * FROM auth'
-    c = conn.cursor()
-    c.execute(sql)
-    rows = c.fetchall()
-    auth = authObj( rows[0] )
-    return auth
+    with open('static/docs/auth.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile, skipinitialspace=True)
+        auth = authObj( list(reader)[0] )
+        return auth
 
 
 ##Following method queries the Reviews from Database
 def queryData():
-    conn = sqlite3.connect( 'database\database.db' )
-    sql = 'SELECT * FROM reviews'
-    c = conn.cursor()
-    c.execute(sql)
-    rows = c.fetchall()
-    reviews = [] 
-    l = list(range(0, len(rows) ))
-    for row in rows:
-        if l:
-            row += l.pop(),
-        reviews.append( reviewObj( row ) )
-    return reviews
+    with open('static/docs/reviews.csv', 'r') as csvfile:
+        reader = csv.reader(csvfile)
+        reviews = []
+        idNum = 0
+        for row in reader:
+            print('row')
+            row += idNum,
+            reviews.append( reviewObj( row ) )
+            idNum += 1
+        return reviews
 
 
 ##Following method deletes a Review from Database
-def deleteReviewRecord( email ):
-    sql = 'DELETE FROM reviews WHERE Email = ?;'
-    conn = sqlite3.connect( 'database\database.db' )
-    c = conn.cursor()
-    c.execute( sql, (email,) )
-    conn.commit()
+# def deleteReviewRecord( email ):
+#     sql = 'DELETE FROM reviews WHERE Email = ?;'
+#     conn = sqlite3.connect( 'database\database.db' )
+#     c = conn.cursor()
+#     c.execute( sql, (email,) )
+#     conn.commit()
     

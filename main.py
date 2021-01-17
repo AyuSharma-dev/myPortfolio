@@ -75,7 +75,7 @@ def saveReview():
     if( authObj.username == request.args.get('username') and authObj.password == request.args.get('password') ):
         reviewObj = request.json
         print( reviewObj )
-        insertData(( reviewObj['Name'], reviewObj['Email__c'], reviewObj['Title__c'], 
+        insertData(( reviewObj['Email__c'], reviewObj['Name'], reviewObj['Title__c'], 
                      reviewObj['Company__c'], reviewObj['Comment__c'], reviewObj['Image__c']))
 
         response = {'message':'Review added on the page.'}
