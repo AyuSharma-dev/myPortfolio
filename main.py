@@ -5,7 +5,7 @@ from flask_wtf.file import FileField, FileRequired, FileAllowed     #Flask file 
 from werkzeug.utils import secure_filename  #Get the fileName of uploaded picture
 import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))    #Generate toekn
 from wtforms.validators import InputRequired    #Make the fields required.
-from Utility.databaseUtil import queryData, insertData, reviewObj, authObj, getUserPass, deleteReviewRecord
+from Utility.databaseUtil import queryData, insertData, reviewObj, authObj, getUserPass
 from json import dumps, loads   #To create the JSON body
 import requests     #To send Review data onto Salesforce
 
