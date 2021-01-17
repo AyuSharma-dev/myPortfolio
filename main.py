@@ -1,18 +1,20 @@
-from flask import Flask, render_template, request, redirect
-from flask_wtf import FlaskForm
-from wtforms import TextAreaField, StringField
-from flask_wtf.file import FileField, FileRequired, FileAllowed
-from werkzeug.utils import secure_filename
-import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
-from wtforms.validators import InputRequired
+from flask import Flask, render_template, request, redirect     #Flask methods for framework
+from flask_wtf import FlaskForm     #Form to contain all the fields
+from wtforms import TextAreaField, StringField      #Fields for Review data
+from flask_wtf.file import FileField, FileRequired, FileAllowed     #Flask file fields
+from werkzeug.utils import secure_filename  #Get the fileName of uploaded picture
+import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))    #Generate toekn
+from wtforms.validators import InputRequired    #Make the fields required.
 from Utility.databaseUtil import queryData, insertData, reviewObj, authObj, getUserPass, deleteReviewRecord
-from json import dumps, loads
-import requests
+from json import dumps, loads   #To create the JSON body
+import requests     #To send Review data onto Salesforce
+
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = os.urandom(24)
+app.config['SECRET_KEY'] = os.urandom(24) #Generating the secret key
 
 
+##Following class contains all the form fields for Review form
 class AForm(FlaskForm):
     rName = StringField(validators=[InputRequired()])
     rTitle = StringField(validators=[InputRequired()])
@@ -22,6 +24,7 @@ class AForm(FlaskForm):
     rReview = TextAreaField('Text', validators=[InputRequired()], render_kw={"rows": 4, "cols": 50})
 
 
+##Home Page
 @app.route('/', methods=['POST', 'GET'])
 def home():
     form = AForm()
@@ -29,11 +32,15 @@ def home():
     print(rows)
     return render_template("index.html", form=form, rows=rows)
 
+
+##Catching the html button urls
 @app.route('/templates/index.html', methods=['POST', 'GET'])
 def renderIndex():
     form = AForm()
     return render_template("index.html", form=form)
 
+
+##Method sends the Review data onto Salesforce page
 @app.route('/sendForApproval', methods=['POST', 'GET'])
 def sendForApproval():
     form = AForm()
@@ -58,6 +65,7 @@ def sendForApproval():
     return redirect("/")
     
 
+##Catch Salesforce POST request for Approvale and saves the review in database
 @app.route("/saveReview", methods=['POST'])
 def saveReview():
     form = AForm()
@@ -75,6 +83,7 @@ def saveReview():
     return {'message':'Username or Password did not match'}, 401
 
 
+##Catch Salesforce POST request for Rejection and deletes the review record from database
 @app.route("/deleteReview", methods=['POST'])
 def deleteReview():
     form = AForm()
@@ -86,9 +95,16 @@ def deleteReview():
         print( reviewObj )
         deleteReviewRecord( reviewObj['Email__c'] )
 
+        imageUrl = reviewObj['Image__c']
+        imageUrl = os.path.abspath(imageUrl)
+        if( imageUrl != None and os.path.exists( imageUrl ) ):
+            os.remove( imageUrl )
+            print('delete file')
         response = {'message':'Review delete/Rejected successfully'}
         return response, 200
     return {'message':'Username or Password did not match'}, 401
 
+
+##Running the app
 if __name__ == '__main__':
     app.run(debug=True)

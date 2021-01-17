@@ -1,5 +1,6 @@
 import sqlite3
 
+##Review class with all required Fields
 class reviewObj:
     def __init__(self, data):
         print(data[0])
@@ -11,11 +12,15 @@ class reviewObj:
         self.image = data[5]
         self.id = data[6]
 
+
+##Auth object class with Username and Password fields
 class authObj:
     def __init__(self, data):
         self.username = data[0]
         self.password = data[1]
 
+
+##Following method creates the Reviews datatable ( Used once )
 def createTable():
     sql_create_review_table = """ CREATE TABLE IF NOT EXISTS reviews (
                                     Email text PRIMARY KEY,
@@ -30,6 +35,8 @@ def createTable():
     c.execute( sql_create_review_table )
     conn.commit()
 
+
+##Following method creates the Auth datatable ( Used once )
 def createAuthTable():
     sql_create_auth_table = """ CREATE TABLE IF NOT EXISTS auth (
                                     Username text PRIMARY KEY,
@@ -40,6 +47,8 @@ def createAuthTable():
     c.execute( sql_create_auth_table )
     conn.commit()
 
+
+##Following method inserts the username and password values( Used once )
 def insertUserNamePassword():
     sql = ''' INSERT INTO auth(Username,Password_hash)
               VALUES(?,?) '''
@@ -48,15 +57,19 @@ def insertUserNamePassword():
     c.execute( sql, ( 'portfolioUser@sf.com', "b'gAAAAABgAr08c0VWa5WMAnI3smwOOelf1qmr8S-cMPatfNf22lHvHyZVPGYA3AKnr9HWmPhp4C8D2UNxIf67Nuw0f9OVqENxvw=='" ) )
     conn.commit()
 
-def updateData( review ):
+
+##Following method updates the Password for username ( Not in use )
+def updateData( newPassword, username ):
     sql = ''' UPDATE auth
               SET Password_hash = ?
               WHERE Username = ?'''
     conn = sqlite3.connect( 'database\database.db' )
     c = conn.cursor()
-    c.execute( sql, review )
+    c.execute( sql, (newPassword, username) )
     conn.commit()
 
+
+##Following method inserts the Reviews in database
 def insertData( review ):
     sql = ''' INSERT INTO reviews(Name,Email,Title,Company,Review,Image)
               VALUES(?,?,?,?,?,?) '''
@@ -65,6 +78,8 @@ def insertData( review ):
     c.execute( sql, review )
     conn.commit()
 
+
+##Following method queries the Auth values from Database
 def getUserPass():
     conn = sqlite3.connect( 'database\database.db' )
     sql = 'SELECT * FROM auth'
@@ -75,6 +90,7 @@ def getUserPass():
     return auth
 
 
+##Following method queries the Reviews from Database
 def queryData():
     conn = sqlite3.connect( 'database\database.db' )
     sql = 'SELECT * FROM reviews'
@@ -90,6 +106,7 @@ def queryData():
     return reviews
 
 
+##Following method deletes a Review from Database
 def deleteReviewRecord( email ):
     sql = 'DELETE FROM reviews WHERE Email = ?;'
     conn = sqlite3.connect( 'database\database.db' )
