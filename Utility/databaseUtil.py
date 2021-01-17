@@ -54,11 +54,19 @@ def queryData():
         return reviews
 
 
-##Following method deletes a Review from Database
-# def deleteReviewRecord( email ):
-#     sql = 'DELETE FROM reviews WHERE Email = ?;'
-#     conn = sqlite3.connect( 'database\database.db' )
-#     c = conn.cursor()
-#     c.execute( sql, (email,) )
-#     conn.commit()
-    
+#Following method deletes a Review from Database
+def deleteReviewRecord( email ):
+    lines = list()
+    with open('static/docs/reviews.csv', 'r') as readFile:
+        reader = csv.reader(readFile)
+        for row in reader:
+            lines.append(row)
+            if row[0] == email:
+                lines.remove(row)
+
+    with open('static/docs/reviews.csv', 'w', newline='') as writeFile:
+        writer = csv.writer(writeFile)
+        for row in lines:
+            if any(field.strip() for field in row):
+                writer.writerow(row)
+        
