@@ -1,0 +1,51 @@
+<div id="about" class="about">
+    <div class="col-md-6 about-left">
+        <div id="owl-demo1" class="owl-carousel owl-carousel2">
+            <div class="item">
+                <div class="about-left-grid">
+                    <h2>As a <span>Salesforce Developer & admin</span></h2>
+                    <p style='font-size:125%'><strong>Since 2018,</strong> I have been working as a Salesforce Developer and Administrator. My role is to provide the high class and efficiently written Automation logics like Apex Trigger, Apex Batch, Workflows etc. I have also
+                        worked on Salesforce CPQ and has a 1 year hands-on experience of the same. Salesforce CPQ and Custom Integration from Salesforce to Third part softwares are my strongest part.</p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="about-left-grid">
+                    <h2>My <span>Education</span></h2>
+                    <p style='font-size:125%'>I've completed my, Vocational Training from <a href='https://www.larsentoubro.com/'>Larson & Toubro</a>.<br/> B.Tech from <a href="https://www.aryainstitutejpr.com/" target="_blank">Arya Institute of Engineering & Technology</a>                            , during the period of 2014 - 2018.<b/> Senior secondary Education From Shree Mahaveer Digambar Jain Sr. Sec.</a> School.<b/>
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <div class="about-left-grid">
+                    <h2>Free time Activities and <span>Hobbies</span></h2>
+                    <ul style='display: grid;list-style-type: none;font-size:125%'>
+                        <li>Traveling and Trekking</li><br/>
+                        <li>Staying Active on Social Media</li><br/>
+                        <li>Learning new technologies</li><br/>
+                        <li>Watching Anime</li><br/>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6 about-right">
+
+    </div>
+    <div class="clearfix"> </div>
+    
+    <script src="{{ url_for('static', filename='js/owl.carousel.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $("#owl-demo1").owlCarousel({
+                items: 1,
+                lazyLoad: false,
+                autoPlay: true,
+                navigation: false,
+                navigationText: false,
+                pagination: false,
+            });
+        });
+    </script>
+    <!-- Feedback -->
+
+</div>

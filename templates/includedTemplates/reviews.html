@@ -1,0 +1,198 @@
+<!--Review Add Sections-->
+
+
+<div class="modal ab fade" id="tlmMdl" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog about" role="document">
+        <div class="modal-content about">
+            <div class="modal-header">
+                <span class="project-title">Add Review</span>
+                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body about">
+                <form action="/sendForApproval" class="form-container" method="POST" enctype="multipart/form-data" id="reviewForm">
+                    {{ form.csrf_token }}
+                    <div class="about">
+                        <div class="about-inner" >
+                            <div class="col-md-5">
+                                <div id="fileUpload">
+                                    <label for="dp_file"></label>
+                                    <!-- <input type=file name=rName> -->
+                                    {{ form.rFile( id="dp_file", style="color: transparent;height:0px;overflow:hidden" ) }}
+                                    <button type="button" onclick="chooseFile();" style="background-image: url(http://www.clker.com/cliparts/M/I/9/z/q/H/male-upload-md.png); height: 120px; width: 130px; color: transparent;background-size: cover;">choose file</button>
+                                    <script>
+                                    function chooseFile() {
+                                        $("#dp_file").click();
+                                    }
+                                    </script>
+                                </div>
+                                <div id="uploadedPic" style="display:none;">
+                                    <img id="up_dp" src="{{ url_for('static', filename='images/myDp.jpg') }}" class="project-img" alt="DP" style="object-fit: cover; width: 180px; height: 180px;border-radius: 50%;outline: 1px solid white; outline-offset: -4px;border: 5px solid #cfd8dc;"/>
+                                </div>
+                            </div>
+                            <div class="col-md-7" style="text-align: left;">
+                                <label for="rName">Name</label>
+                                <!-- <input type="text" placeholder="Enter Full Name" name="Name" required> -->
+                                {{ form.rName( class_='form-control', type='text', placeholder='Enter Full Name' ) }}
+
+                                <label for="title"><br>Title</br></label>
+                                <!-- <input type="text" placeholder="Enter Title" name="title" required> -->
+                                {{ form.rTitle( class_='form-control', type='text', placeholder='Enter Title' ) }}
+
+                                <label for="comp"><br>Company</br></label>
+                                <!-- <input type="text" placeholder="Enter Email" name="email" required> -->
+                                {{ form.rComp( class_='form-control', type='text', placeholder='Enter Company Name' ) }}
+
+                                
+
+                                <label for="email"><br>Email</br></label>
+                                <!-- <input type="text" placeholder="Enter Email" name="email" required> -->
+                                {{ form.rEmail( class_='form-control', type='text', placeholder='Enter Email' ) }}
+
+                                <div role="dialog" aria-labelledby="myModalLabel" style="float:right;">
+                                    <div class="modal-dialog about" role="document">
+                                        <div class="modal-content about" style="border: transparent;">
+                                            <div class="form-popup" style="width:80%;background-color:white;display:none;" id="okButton"  >
+                                                <div style="margin:10%;">
+                                                    <p><strong>Your review is going to submit for approval, click OK to proceed.</strong></p>
+                                                    <br/>
+                                                    <input type="submit" name="OK" label="OK" class="btn" id="okSubmit">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="about-inner" style="text-align: left;",>
+                        <label for="00N7F00000SiVqg"><br>Comment</br></label>
+                        <!-- <textarea name="comment" form="usrform" placeholder="Write your review here.." name="Review" required></textarea><br/>  -->
+                        {{ form.rReview( class_='form-control', type='text', placeholder='Write your review here..' ) }}                            <br/>
+                        <input type="submit" name="submit" class="btn" id="submitBtn" >
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $('#reviewForm').submit(function () {
+        var a = document.getElementById("okButton");
+        if( a.style.display != "block" ){
+            a.style.display = "block";
+            $("#reviewForm input").prop("disabled", true);
+            $("#reviewForm textarea").prop("disabled", true);
+            $("#okSubmit").prop("disabled", false);
+        }
+        else{
+            console.log('clicking submit button');
+            $("#reviewForm input").prop("disabled", false);
+            $("#reviewForm textarea").prop("disabled", false);
+            document.getElementById("reviewForm").submit();
+        }
+        return false;
+    });
+
+    $('#dp_file').change(function(event) {
+        console.log('file uploaded');
+        var fileUploadBtn = document.getElementById("fileUpload");
+        var uploadedFile = document.getElementById("uploadedPic");
+        fileUploadBtn.style.display ="none";
+        uploadedFile.style.display ="block";
+        var upPic = document.getElementById("up_dp");
+        upPic.src = URL.createObjectURL(event.target.files[0])
+    });
+
+    function onWriteReview() {
+        console.log('close button');
+        var fileUploadBtn = document.getElementById("fileUpload");
+        var uploadedFile = document.getElementById("uploadedPic");
+        fileUploadBtn.style.display ="block";
+        uploadedFile.style.display ="none";
+        var fileUploadBtn = document.getElementById("dp_file");
+        fileUploadBtn.value = '';
+    }
+</script>
+
+
+
+<!--Review Add section end-->
+
+<!--Review Show start-->
+
+
+<div class="blog trailheadDetails" id="blogs" style="padding: 0em 0;">
+    <div class="container">
+        <div class="service-head text-center">
+            <h4>Reviews</h4>
+            <h3>Reviews I got from <span>People I worked for</span></h3>
+            <span class="border one"></span>
+        </div>
+        <div class="container">
+        <div class="scrolling-wrapper">
+            {% for row in rows %}
+            <div class="card hover" id="dCard_{{row.id}}">
+                <div style="display: flex;align-items: center;">
+                    <img src="{{ url_for('static', filename=row.image) }}" class="project-img" alt="DP" style="object-fit: cover; width: 200px; height: 200px; margin-top: 8px;margin-left: 8px;outline: 1px solid white; outline-offset: -4px;" />
+                    <div style="margin-left: 5%;">
+                        <div style="line-height: 0.7;">
+                            <p>
+                                <h2 style="font-family: fantasy;">{{ row.name }}</h2>
+                            </p>
+                            <p style="font-family: -webkit-body;color: gray;font-size:20px">{{ row.title }}</p>
+                        </div>
+                        <br/> <strong>Comapny:</strong>
+                        <p style="font-style: italic; color: cadetblue;">{{ row.company }}</p>
+                        <br/> <b><strong>Contact:</strong></b>
+                        <p style="font-style: italic; color: cadetblue;">{{ row.email }}</p>
+                        
+                    </div>
+                </div>
+                <div style="margin-left: 5%;" >
+                    <br/> Review:<br/>
+                    <div id="showLess_{{row.id}}">
+                        <p style="font-family: Merriweather; font-style: italic;word-break: break-word;white-space:normal;">{{ row.review | truncate(300) }}
+                            {% if row.review|length > 300 %}
+                            <a onclick="makeScrollable(event)" data-rowId="{{row.id}}" style="color:blue">...show more.</a>
+                            {% endif %}
+                        </p>
+                    </div>
+                    <div id="showMore_{{row.id}}" style="display:none;" >
+                        <p style="font-family: Merriweather; font-style: italic;word-break: break-word;white-space:normal;">{{ row.review }}</p><a onclick="makeScrollable(event)" data-rowId="{{row.id}}" style="color:blue"> --show less.</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+        </div><br/><br/> If you have anything to say about me or my work then please: <a href="#" data-toggle="modal" data-target="#tlmMdl" class="read hvr-shutter-in-horizontal" onclick="onWriteReview()">Write a Review</a><br/><br/><br/>
+    </div>
+</div>
+<script>
+    function makeScrollable( event ){
+        console.log(event);
+        let rowId = event.target.getAttribute('data-rowId');
+        try{
+            console.log('calling method-->'+rowId);
+            if( document.getElementById("showMore_"+rowId).style.display == "none" ){
+                document.getElementById("showMore_"+rowId).style.display = "block";
+                document.getElementById("showLess_"+rowId).style.display = "none";
+                document.getElementById("dCard_"+rowId).style = "overflow-y: auto;";
+            }
+            else{
+                document.getElementById("showMore_"+rowId).style.display = "none";
+                document.getElementById("showLess_"+rowId).style.display = "block";
+                document.getElementById("dCard_"+rowId).style = "";
+            }
+        }
+        catch( err ){
+            console.log(err.message);
+        }
+    }
+</script>
+
+<br/>
+
+<!--Review Show end-->
