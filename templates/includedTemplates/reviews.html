@@ -131,6 +131,8 @@
             <span class="border one"></span>
         </div>
         <div class="container">
+        <br/><br/>
+        {% if rows|length > 0 %}
         <div class="scrolling-wrapper">
             {% for row in rows %}
             <div class="card hover" id="dCard_{{row.id}}">
@@ -166,6 +168,7 @@
             </div>
             {% endfor %}
         </div>
+        {% endif %}
         
         </div><br/><br/> If you have anything to say about me or my work then please: <a href="#" data-toggle="modal" data-target="#tlmMdl" class="read hvr-shutter-in-horizontal" onclick="onWriteReview()">Write a Review</a><br/><br/><br/>
     </div>
