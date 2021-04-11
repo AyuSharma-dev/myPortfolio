@@ -2719,3 +2719,17 @@ svg:not(:root) {
         display: none;
     }
 }
+
+.viewmore-title{
+    font-family: sans-serif;
+    font-size: 110%;
+}
+
+.viewmore-list{
+    padding-top: 15px;
+    list-style: none;
+}
+
+.viewmore-list::before{
+    content: "\00BB";
+}

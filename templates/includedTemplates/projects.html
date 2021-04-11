@@ -1,3 +1,42 @@
+<!--Viewmore Popup-->
+<div class="modal ab fade" id="tlmMd2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog about" role="document">
+        <div class="modal-content about">
+            <div class="modal-header">
+                <span class="project-title" id="prtitle">Add Review</span>
+                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body about">
+                <div class="about">
+                    <div class="about-inner" >
+                        <p style="display: none;" >
+                            <div id="prbody" >Body</div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--//Viewmore Popup-->
+
+
+<script>
+    //Method sets Title and details on the Popup.
+    function showDetails( event ){
+        console.log(event);
+        let header = event.target.getAttribute('data-header');
+        let details = event.target.getAttribute('data-detail');
+        try{
+            document.getElementById('prtitle').innerHTML = header;
+            document.getElementById('prbody').innerHTML = details;
+        }
+        catch( err ){
+            console.log(err.message);
+        }
+    }
+</script>
+
 <div class="blog" id="blogs">
     <div class="container">
         <div class="service-head text-center">
@@ -18,53 +57,31 @@
                     <li>Sales Cloud</li>
                     <li>Docusign</li>
                 </ul>
-                <div class="modal ab fade" id="tlmMd2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                    <div class="modal-dialog about" role="document">
-                        <div class="modal-content about">
-                            <div class="modal-header">
-                                <span class="project-title">Add Review</span>
-                                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                            </div>
-                            <div class="modal-body about">
-                                <div class="about">
-                                    <div class="about-inner" >
-                                        <p style="display: none;" ><div id="prtitle" >title</div> 
-                                            <div id="prbody" >Body</div>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Configured Salesforce CPQ' 
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce CPQ Configuration' 
                 data-detail="
-                    for a well known Organization from the very scratch. From installing to launching the functionality live, Lead the Project with my team. We developed Apex Triggers and Batches and combined
-                    them with native Salesforce CPQ features to achieve the client requirements.
-                    Test
+                    <strong class='viewmore-title'>Configured Salesforce CPQ for multiple organization from scratch to provide seamless Product selling and Renewal automation.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Utilized many of CPQ automation tools like Price Rules, Product Rules, QCP plugin to provide the automate price calculation and Product selection with very less clicks.
+                        </li>
+                        <li class='viewmore-list'>
+                            Configured the whole Lead to Renewal process for different organizations by using the CPQ's Renewal based model with Contract, Subscriptions, Opportunities etc.
+                        </li>
+                        <li class='viewmore-list'>
+                            Developed two way Integration between Salesforce and Another cloud system to utilize the CPQ's Price calculation feature.
+                        </li>
+                        <li class='viewmore-list'>
+                            Created Quote Documents to generate a good looking PDF Quotes with desired information and designing.
+                        </li>
+                    </ul>
                     <br/>
-                    Test
                 " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
             
-            <script>
-                function showDetails( event ){
-                    console.log(event);
-                    let header = event.target.getAttribute('data-header');
-                    let details = event.target.getAttribute('data-detail');
-                    try{
-                        document.getElementById('prtitle').innerHTML = header;
-                        document.getElementById('prbody').innerHTML = details;
-                    }
-                    catch( err ){
-                        console.log(err.message);
-                    }
-                }
-            </script>
-
             <div class="col-md-6 news-text">
-                <h3>Salesforce Custom Integration with Chargify</h3>
+                <h3>Salesforce Custom Integrations</h3>
                 <ul class="news">
                     <li>Apex Batch</li>
                     <li>Apex Trigger</li>
@@ -74,72 +91,219 @@
                 <ul class="news">
                     <li>Webservice</li>
                 </ul>
-                <p>Implemented<strong> Custom Integration of Salesforce with Chargify </strong> using Rest APIs inside APEX code. Chargify is a Subscription dedicated CRM which takes care of the customer subscriptions of different services. We Implemented
-                    the code to create a dynamic Sync between Salesforce and Chargify to increase the source efficiency and feasibility.</p>
-                <!--<a href="#" data-toggle="modal" data-target="#ckgsMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce Custom Integrations' 
+                data-detail="
+                    <strong class='viewmore-title'>Implemented multiple flawless integrations from Salesforce to Third party clouds/System.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Implemented Integrations with Cloud systems like Slack, Chargify, Apptopia, Five9, Oracle, etc. system etc.
+                        </li>
+                        <li class='viewmore-list'>
+                            Built Apex Triggers Batches to perform the Callouts to update information in other system and also to get data from Callouts and update information in Salesforce itself. So both Systems stay in Sync.
+                        </li>
+                        <li class='viewmore-list'>
+                            Developed WebService classes in Salesforce to provide APIs for the client System so they can Post/Get the information through Salesforce.
+                        </li>
+                        <li class='viewmore-list'>
+                            Implemented Platform Event based Integration to Publish multiple Platform events with desired information which were consumed by the Mulesoft.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
             <div class="clearfix"></div>
         </div>
         <div class="news-grid w3l-agile">
             <div class="col-md-6 news-text">
-                <h3> Salesforce Integration with Apptopia</h3>
+                <h3>Salesforce Service Cloud Implementation</h3>
                 <ul class="news">
-                    <li>Apex Batch</li>
-                    <li>Apex Trigger</li>
-                    <li>Rest API</li>
-                    <li>Validation rule</li>
+                    <li>Service Cloud</li>
+                    <li>Aura Components</li>
+                    <li>Apex</li>
                 </ul>
-                <p>Implemented<strong> Custom Integration of Salesforce with Chargify </strong> using Rest APIs inside APEX code to generate the Leads in Salesforce from Apptopia's Application data. Apptopia provides app publishers & developers access
-                    to app intelligence worldwide. Identify store trends, SDKs & opportunities to beat the competition. We used custom rest APIs to provide the Sync between both platforms. We created 10 batches which runs one after another to fetch
-                    the data and in the last step analyse the data and create the Possible Leads for client. </p>
-                <!--<a href="#" data-toggle="modal" data-target="#bookStackMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                <ul class="news">
+                    <li>VisualForce</li>
+                    <li>Javascript</li>
+                </ul>
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce Service Cloud Implementation' 
+                data-detail="
+                    <strong class='viewmore-title'>Implemented Logics to provide flawless Service cloud experience.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Worked on Web To Case, Email To Case and SMS To Case to create the Cases in Salesforce from different sources and insert them after doing the desire processing.
+                        </li>
+                        <li class='viewmore-list'>
+                            Create Apex Trigger and Batches to Process the data of different Service Cloud objects.
+                        </li>
+                        <li class='viewmore-list'>
+                            Created Lightning components for Visualizing and Manual insertion of Data.
+                        </li>
+                        <li class='viewmore-list'>
+                            Utilized Service Console APIs to make the custom components work flawlessly on the Service Console tabs.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
+                
             </div>
             <div class="col-md-6 news-text">
-                <h3> Salesforce Integration with Slack</h3>
+                <h3>Salesforce Sales Cloud Implementation</h3>
                 <ul class="news">
-                    <li>Apex Trigger</li>
-                    <li>Rest API</li>
-                    <li>Slack Bot</li>
-                    <li>Webhooks</li>
+                    <li>Sales Cloud</li>
+                    <li>Web To Lead, Email To Lead</li>
                 </ul>
-                <p>Implemented an Integration of Slack with Salesforce to provide the Opportunity status information inside the Slack chat channels. Implemented Rest API in Apex trigger to send the message to SLACK whenever an special condition occur.
-                    Create Slack bot for the Salesforce and used its Authorization techniques to established the requirement.
-                </p>
-                <!--<a href="#" data-toggle="modal" data-target="#pineStemMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                <ul class="news">
+                    <li>Lead Conversion</li>
+                    <li>Lightning Component Quick Actions.</li>
+                </ul>
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce Sales Cloud Implementation' 
+                data-detail="
+                    <strong class='viewmore-title'>Implemented Logics to provide flawless Sales cloud experience.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Worked on Web To Lead, Email To Lead to get the Leads from different Sources into the Salesforce.
+                        </li>
+                        <li class='viewmore-list'>
+                            Configured the Lead conversion process to provide creation of different Objects from Lead.
+                        </li>
+                        <li class='viewmore-list'>
+                            Implemented Quick Actions and Lightning Components to perform many actions from Record pages.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
             <div class="clearfix"></div>
         </div>
         <div class="news-grid w3l-agile">
             <div class="col-md-6 news-text">
-                <h3> <a href="http://jaspex.herokuapp.com/" target="_blank">Json To Apex convertor (JASPEX) </a></h3>
+                <h3>Salesforce Omni Studio Implementation</h3>
+                <ul class="news">
+                    <li>Omnichannel Studio</li>
+                    <li>Apex Trigger</li>
+                    <li>Service Cloud</li>
+                </ul>
+                <ul class="news"> 
+                    <li>Service Console</li>
+                </ul>
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce Omni Studio Implementation' 
+                data-detail="
+                    <strong class='viewmore-title'>Configured Salesforce Omni Studio provide Lead/Case routing.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Configured Routing for Lead and Case so they can be available on Omni Console for the respective users.
+                        </li>
+                        <li class='viewmore-list'>
+                            Created different Batches and Apex Triggers to manage the Custom Routing of records on Omni Console.
+                        </li>
+                        <li class='viewmore-list'>
+                            Created Automated process for creation of the Skills and Service Resources for the respective users.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
+                
+            </div>
+            <div class="col-md-6 news-text">
+                <h3>Financial Service Cloud Implementation</h3>
+                <ul class="news">
+                    <li>Financial Service Cloud</li>
+                    <li>Visual Flows</li>
+                </ul>
+                <ul class="news">
+                    <li>Lightning Web Components</li>
+                    <li>Rest Web Services</li>
+                </ul>
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Financial Service Cloud Implementation' 
+                data-detail="
+                    <strong class='viewmore-title'>Configured Financial Service Cloud for Organization.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            Provided different automation tools to manage the Residential Loan Applications.
+                        </li>
+                        <li class='viewmore-list'>
+                            Implemented Lightning Web Components to and Visual Flow to Capture the Payment Information.
+                        </li>
+                        <li class='viewmore-list'>
+                            Implemented Payment Integration with the third Party System to keep the Payment information in Sync.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="news-grid w3l-agile">
+            <div class="col-md-6 news-text">
+                <h3>Salesforce Tools</h3>
                 <ul class="news">
                     <li>Python</li>
                     <li>Flask</li>
                     <li>Heroku</li>
                     <li>Rest API</li>
-                </ul>
-                <ul class="news">
                     <li>JSON</li>
                     <li>Regex</li>
                 </ul>
-                <p>Crated an Open Source tool to convert the hard coded JSON into Salesforce APEX JSON generator class. You can find the live tool
-                    <a href='http://jaspex.herokuapp.com/'> here</a> and github repository <a href='https://github.com/AyuSharma-dev/jaspex'>here</a>. This is currently hosting on Heroku Platform and written in Python's Flask library with using Regex
-                    and other sets of String handling to parse the Json into Apex.
-                </p>
-                <!--<a href="#" data-toggle="modal" data-target="#baseDriveMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                <ul class="news">
+                   
+                </ul>
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Salesforce Tools' 
+                data-detail="
+                    <strong class='viewmore-title'>Created below Tools for Salesforce development flexibility.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            <a style='color:blue' href='http://jaspex.herokuapp.com/'>Json To Apex convertor (JASPEX)</a><br/>
+                            Crated an Open Source tool to convert the hard coded JSON into Salesforce APEX JSON generator class.
+                        </li>
+                        <li class='viewmore-list'>
+                            More tools are coming soon :)<b/>
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
             <div class="col-md-6 news-text">
-                <h3> <a href="https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex" target="_blank">VS-Code extension for JASPEX </a></h3>
+                <h3>VS-Code Extensions</h3>
                 <ul class="news">
                     <li>VS Code</li>
                     <li>NodeJS</li>
                     <li>Rest API</li>
+                    <li>Salesforce CLI</li>
+                    <li>SFDX</li>
                 </ul>
-                <p>This VS code extension does the same work as JASPEX online tool does on browser. It converts the hard-coded JSON into APEX JSON generator class. You can install it from <a href='https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex'>here</a>.
-                    This extension is open source and its code is available <a href='https://github.com/AyuSharma-dev/Jaspex_Vscode'>here</a>. This tools call the JASPEX api through Node JS, which created and deployed on Heroku. It passes the selected
-                    JSON and provide APEX with different options.
-                </p>
-                <!--<a href="#" data-toggle="modal" data-target="#counterPickMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                <br/>
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='VS-Code Extensions' 
+                data-detail="
+                    <strong class='viewmore-title'>Created below VSCode extensions for Salesforce development flexibility.</strong>
+                    <br/><br/>
+                    <ul>
+                        <li class='viewmore-list'>
+                            <a style='color:blue' href='https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.salesforce-md-info'>Salesforce Metadata Info</a><br/>
+                            Extension provides the all Metadata related information like Create By, Created Date etc right into Salesforce.
+                        </li>
+                        <li class='viewmore-list'>
+                            <a style='color:blue' href='https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.salesforce-testsuite-manager'>Salesforce Test Suite Manager</a><br/>
+                            Extension provides different commands to Run, Create and Retrieve the Test Suites in VScode itself.
+                        </li>
+                        <li class='viewmore-list'>
+                            <a style='color:blue' href='https://marketplace.visualstudio.com/items?itemName=AyuSharma-dev.jsontoapex'>JSON to APEX</a><br/>
+                            Extension converts the JSON into Apex JSON generator class object.
+                        </li>
+                    </ul>
+                    <br/>
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
             <div class="clearfix"></div>
         </div>
