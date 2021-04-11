@@ -18,11 +18,51 @@
                     <li>Sales Cloud</li>
                     <li>Docusign</li>
                 </ul>
-                <p><strong>Configured Salesforce CPQ</strong> for a well known Organization from the very scratch. From installing to launching the functionality live, Lead the Project with my team. We developed Apex Triggers and Batches and combined
+                <div class="modal ab fade" id="tlmMd2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog about" role="document">
+                        <div class="modal-content about">
+                            <div class="modal-header">
+                                <span class="project-title">Add Review</span>
+                                <button type="button" class="close ab" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            </div>
+                            <div class="modal-body about">
+                                <div class="about">
+                                    <div class="about-inner" >
+                                        <p style="display: none;" ><div id="prtitle" >title</div> 
+                                            <div id="prbody" >Body</div>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="#" data-toggle="modal" data-target="#tlmMd2" data-header='Configured Salesforce CPQ' 
+                data-detail="
+                    for a well known Organization from the very scratch. From installing to launching the functionality live, Lead the Project with my team. We developed Apex Triggers and Batches and combined
                     them with native Salesforce CPQ features to achieve the client requirements.
-                </p>
-                <!--<a href="#" data-toggle="modal" data-target="#tlmMdl" class="read hvr-shutter-in-horizontal">Read More</a>-->
+                    Test
+                    <br/>
+                    Test
+                " class="read hvr-shutter-in-horizontal" onclick="showDetails(event)">View details</a>
             </div>
+            
+            <script>
+                function showDetails( event ){
+                    console.log(event);
+                    let header = event.target.getAttribute('data-header');
+                    let details = event.target.getAttribute('data-detail');
+                    try{
+                        document.getElementById('prtitle').innerHTML = header;
+                        document.getElementById('prbody').innerHTML = details;
+                    }
+                    catch( err ){
+                        console.log(err.message);
+                    }
+                }
+            </script>
+
             <div class="col-md-6 news-text">
                 <h3>Salesforce Custom Integration with Chargify</h3>
                 <ul class="news">
